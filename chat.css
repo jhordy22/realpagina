@@ -1,0 +1,347 @@
+#chat-icon img {
+    position: fixed;
+    bottom: 30px;
+    width: 150px;
+    height: 150px;
+    right: 10px;
+    cursor: pointer;
+    z-index: 2;
+}
+
+#chat-container {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 400px;
+    height: 500px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    overflow: hidden;
+    background-color: #fff;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    z-index: 1;
+}
+
+#chat-header {
+    background-color: #005fa8;
+    color: white;
+    padding: 10px;
+    text-align: right;
+    cursor: pointer;
+}
+
+#chat-header p{
+    font-size: 15px;
+    text-align: center;
+}
+
+#chat-body {
+    flex: 1;
+    padding: 10px;
+    overflow-y: auto;
+}
+
+#chat-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+}
+
+#user-input {
+    flex: 1;
+    padding: 10px;
+    margin-right: 8px;
+    font-size: 12px;
+}
+
+button {
+    padding: 8px;
+    background-color: #008CBA;
+    color: white;
+    border: none;
+    margin: 4px;
+    border-radius: 4px;    
+    cursor: pointer;
+    font-size: 12px;
+    width: 65%;
+}
+
+/* Estilo para mensajes del usuario (alineados a la derecha) */
+.message.user {
+    text-align: right;
+    color: blue;
+    margin-bottom: 16px;
+}
+
+/* Estilo para mensajes del bot (alineados a la izquierda) */
+.message.bot {
+    text-align: left;
+    max-width: 60%; /* Puedes ajustar este valor según tus necesidades */
+    word-wrap: break-word; /* Rompe las palabras largas para ajustarse al contenedor */
+    margin-bottom: 16px;
+    
+    
+}
+.message {
+    font-size: 13px; /* Puedes ajustar este valor según tus necesidades */
+    margin-bottom: 8px;
+}
+.message.bot a {
+    color: #FF0000; /* Cambia este valor a rojo o al código de color que prefieras */
+    text-decoration: underline; /* Puedes agregar/substituir esto si deseas subrayar el enlace */
+}
+
+/* Estilo para el botón de enviar */
+.enviar-button {
+    background-color: rgb(255, 65, 65); /* Cambia este valor al color de fondo que desees */
+    color: #fff; /* Cambia este valor al color del texto que desees */
+    padding: 10px 16px; /* Ajusta el espaciado interno según tus preferencias */
+    border: none;
+    border-radius: 4px; /* Ajusta el radio de borde según tus preferencias */
+    cursor: pointer;
+    width: 20%;
+    margin-left: 27%;
+}
+
+/* Estilo para el enlace dentro del botón de enviar, si es relevante */
+.enviar-button a {
+    color: #fff; /* Cambia este valor al color del texto que desees */
+    text-decoration: none;
+}
+/* Añade el estilo para la clase serviceName */
+.serviceName {
+    color: rgb(114, 34, 34); /* Puedes cambiar "rojo" al color que desees */
+    font-weight: bold;
+    font-size: 15px;
+}
+
+.limpiar-button{
+    width:25%;
+    padding: 10px ;
+    background-color: green;
+    margin-left: 0%;
+}
+
+.autocomplete-container {
+    position: relative;
+}
+
+.autocomplete-options {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-top: none;
+}
+
+.autocomplete-options div {
+    padding: 8px;
+    cursor: pointer;
+}
+
+.autocomplete-options div:hover {
+    background-color: #f2f2f2;
+}
+
+#message-options {
+    padding: 8px;
+    font-size: 14px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    width: 100%;
+    box-sizing: border-box;
+    margin-bottom: 10px;
+  }
+  
+  /* Estilo para las opciones del desplegable */
+  #message-options option {
+    font-size: 14px;
+  }
+  
+  /* Cambia el color del fondo y el texto cuando el select está desplegado */
+  #message-options:hover, #message-options:focus {
+    background-color: #f0f0f0;
+    color: #333;
+  }
+  
+  /* Estilo para el texto seleccionado */
+  #message-options option:checked {
+    background-color: #008CBA;
+    color: #fff;
+  }
+  
+  /* Estilo para el borde cuando el select está enfocado */
+  #message-options:focus {
+    border: 1px solid #008CBA;
+    outline: none;
+  }
+
+
+ /*hamburguesa*/
+ 
+ /* ... Estilos existentes ... */
+
+/* Estilos para el menú hamburguesa */
+
+
+/* Estilos generales */
+.nav-mobile {
+    display: none;
+  }
+  
+  .menu-list-mobile {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .menu-list-mobile li {
+    text-align: center;
+    padding: 10px;
+    
+  }
+  
+  .menu-icon {
+    display: none;
+    cursor: pointer;
+    padding: 15px;
+  }
+  
+  .bar {
+    width: 25px;
+    height: 3px;
+    background-color: white;
+    margin: 6px 0;
+  }
+  
+  
+    
+  
+  .menu-icon.hide {
+    display: none;
+  }
+
+
+  .service-item{
+    font-size: 10px;
+    color: white;
+  }
+  
+  #services-dropdown-list {
+    max-width: 300px; /* Ajusta el valor según tus necesidades */
+    /* Otros estilos según sea necesario */
+}
+
+.service-item {
+    max-width: 280px; /* Ajusta el valor según tus necesidades */
+    background-color: #222;
+    margin-bottom: 1px;
+    border-radius: 3px;
+}
+
+
+@media screen and (max-width: 1400px) {
+    #chat-icon img{
+      width: 100px;
+      height: 100px;
+      bottom: 20px;
+    }
+}
+
+
+/* Estilos para pantallas más pequeñas (hasta 600px) */
+@media screen and (max-width: 1200px) {
+  .nav-desktop {
+    display: none;
+  }
+
+  .nav-mobile {
+    display: block;
+    background-color: #333;
+    padding:5px;
+    border-radius: 10px;
+    max-width: 65px;
+    margin-left: 10px;
+    margin-top: 20px;
+    
+  }
+
+  .menu-icon {
+    display: block;
+  }
+
+  .menu-list-mobile {
+    display: none;
+    width: 85%;
+    position: absolute;
+    top: 60px; /* Ajusta según la altura de tu barra de navegación */
+    right: 0;
+    background-color: white;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.1);
+    z-index: 1;
+  }
+
+  .menu-list-mobile.show {
+    display: block;
+  }
+}
+
+
+ /* Estilos para pantallas más pequeñas (hasta 600px) */
+ @media screen and (max-width: 414px) {
+  .nav-desktop {
+    display: none;
+  }
+
+  .nav-mobile {
+    display: block;
+    background-color: #333;
+    padding:5px;
+    border-radius: 10px;
+    max-width: 65px;
+    margin-left: 10px;
+    margin-top: 20px;
+    
+  }
+  #chat-container{
+    width: 380px;
+  }
+  #chat-icon img{
+    width: 100px;
+    height: 100px;
+    bottom: 20px;
+  }
+  .menu-icon {
+    display: block;
+  }
+  .dropdown-content{
+    margin-right: 40px;
+  }
+
+  .container{
+    left: 10px;
+  }
+
+  .menu-list-mobile {
+    display: none;
+    width:320px;
+    position: absolute;
+    top: 50px; /* Ajusta según la altura de tu barra de navegación */
+    left: 90px;
+    background-color: white;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.1);
+    z-index: 1;
+    border-radius: 10px;
+  }
+
+  .menu-list-mobile.show {
+    display: block;
+  }
+}
